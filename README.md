@@ -133,4 +133,44 @@ student{
     e-mail{ 
     display:block; margin-left:20px;font-size:12pt; color:Blue; 
     } 
-    ```
+```
+javascript
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <label for="first" >First</label></br>
+    <input type="text" id="first" name="first"></br>
+    <label for="second"> Second</label> </br>
+    <input type="text" id="second" name="second"></br>
+</br>
+    <button id="result-button">Multiply</button>
+</br>
+ <h1>Result : <h2 id="result"></h2></h1>
+ 
+ <script>
+        
+    var button = document.getElementById("result-button")
+    var firstDigit = document.getElementById("first")
+    var secondDigit = document.getElementById("second")
+    
+    function mulitply(){
+        console.log(firstDigit.value)
+        console.log(secondDigit.value)
+        console.log(Number(firstDigit.value)*Number(secondDigit.value))
+        document.getElementById("result").innerText = Number(firstDigit.value)*Number(secondDigit.value)
+    }
+    
+    button.addEventListener("click",multiply)
+  </script>
+
+</body>
+</html>
+```
